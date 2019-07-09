@@ -1,0 +1,8 @@
+bot_id             = "xxxxxxx"
+bot_token          = "xoxb-xxxxxxxxxxxx"
+verification_token = "xxxxxxxxxxxxx"
+
+# If you are using the aws ssm parameter store
+# bot_id             = "ssm://ssm_alias_name"
+# bot_token          = "ssm://ssm_alias_name"
+# verification_token = "ssm://ssm_alias_name"

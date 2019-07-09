@@ -1,0 +1,17 @@
+[[action]]
+channel = "xxxxx"
+in      = "test"
+out     = "hoge"
+
+[[action]]
+channel = "xxxxx"
+in      = "aaa.*"
+out     = "fuga"
+
+[[action]]
+channel = "xxxxx"
+in      = "^hoge$"
+out     = '''
+hello world
+hoge
+'''
