@@ -55,7 +55,7 @@ func (s *SlackListener) handleMessageEvent(ev *slack.MessageEvent) {
 
 	// 指定されたchannelかつ、正規表現にマッチしたワードに対して、response
 	for _, v := range s.Actions {
-		if ev.Channel == v.ChannelID {
+		if v.ChannelID == "" || ev.Channel == v.ChannelID {
 			re, err := regexp.Compile(v.In)
 			if err != nil {
 				continue
