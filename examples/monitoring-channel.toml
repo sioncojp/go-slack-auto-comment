@@ -1,4 +1,6 @@
 [[action]]
+# channel is optional
+# if `channel` is not found, when react all channel.
 channel = "xxxxx"
 in      = "test"
 out     = "hoge"
