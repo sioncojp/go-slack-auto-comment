@@ -50,11 +50,13 @@ func (s *SlackListener) handleMessageEvent(ev *slack.MessageEvent) {
 
 	// Attachmentの場合、title textを入れる
 	if ev.Msg.Attachments != nil {
-		input = fmt.Sprintf("%s %s", ev.Msg.Attachments[0].Title, ev.Msg.Attachments[0].Text)
+		for _, v := range ev.Attachments {
+			input = fmt.Sprintf("%s\n%s\n%s", input, v.Title, v.Text)
 
-		if ev.Msg.Attachments[0].Fields != nil {
-			for _, v := range ev.Msg.Attachments[0].Fields {
-				input = fmt.Sprintf("%s\n%s\n%s", input, v.Title, v.Value)
+			if v.Fields != nil {
+				for _, vv := range v.Fields {
+					input = fmt.Sprintf("%s\n%s\n%s", input, vv.Title, vv.Value)
+				}
 			}
 		}
 	}
