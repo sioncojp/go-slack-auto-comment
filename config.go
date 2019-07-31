@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"math"
 	"os"
 	"strings"
 
@@ -52,7 +51,8 @@ func LoadToml(dir, region string) (*Config, error) {
 
 	// ファイル間の結合の際、改行を加える
 	for i := 0; i < len(files); i++ {
-		num := int(math.Pow(2, float64(i)))
+		num := int(2 * float64(i))
+		fmt.Println(num + 1)
 		if i == 0 {
 			num = 0
 		}
