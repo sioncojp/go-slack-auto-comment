@@ -1,3 +1,5 @@
+# _config.tomlがファイル名の最初に一致しないとダメなので
+# _config.tomlという名前にしています
 bot_id             = "xxxxxxx"
 bot_token          = "xoxb-xxxxxxxxxxxx"
 verification_token = "xxxxxxxxxxxxx"
